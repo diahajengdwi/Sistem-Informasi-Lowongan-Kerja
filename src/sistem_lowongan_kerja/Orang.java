@@ -4,11 +4,19 @@
  * and open the template in the editor.
  */
 package sistem_lowongan_kerja;
-
+import java.util.Date;
 /**
  *
  * @author Diah Ajeng
  */
 public class Orang {
+    //deklarasi variable
+    private String nama;
+    private String jk;
+    private String tempatLahir;
+    private Date tglLahir;
+    private String noTelp;
+    private String email;
+    
     
 }

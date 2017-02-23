@@ -10,5 +10,15 @@ package sistem_lowongan_kerja;
  * @author Diah Ajeng
  */
 public class Lowongan {
+    //deklarasi variable
+    private BerkasLamaran[] berkasMasuk;
+    private BerkasLamaran[] berkasDiterima;
     
+    public void addBerkas(BerkasLamaran b){
+        
+    }
+    
+    public void terimaBerkas(BerkasLamaran b){
+        
+    }
 }

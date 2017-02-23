@@ -9,6 +9,11 @@ package sistem_lowongan_kerja;
  *
  * @author Diah Ajeng
  */
-public class Pelamar {
+public class Pelamar extends Orang {
+    //deklarasi variable
+    private BerkasLamaran berkas;
     
+    public void createBerkas(){
+        
+    }
 }

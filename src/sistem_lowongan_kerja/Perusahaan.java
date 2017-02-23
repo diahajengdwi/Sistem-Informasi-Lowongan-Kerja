@@ -5,10 +5,16 @@
  */
 package sistem_lowongan_kerja;
 
+import java.util.Date;
 /**
  *
  * @author Diah Ajeng
  */
-public class Perusahaan {
+public class Perusahaan extends Orang{
+    //deklarasi variable
+    private Lowongan[] daftarlowongan;
     
+    public void createLowongan(Date deadline){
+        
+    }
 }

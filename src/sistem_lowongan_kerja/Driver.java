@@ -10,5 +10,7 @@ package sistem_lowongan_kerja;
  * @author Diah Ajeng
  */
 public class Driver {
-    
+    public static void main(String[] args) {
+        
+    }
 }
