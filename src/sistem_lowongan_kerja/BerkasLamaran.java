@@ -11,4 +11,5 @@ package sistem_lowongan_kerja;
  */
 public class BerkasLamaran {
     //deklarasi variable
+    
 }

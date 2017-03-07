@@ -12,6 +12,9 @@ package sistem_lowongan_kerja;
 public class Pelamar extends Orang {
     //deklarasi variable
     private BerkasLamaran berkas;
+    private double ipk;
+    private String gelar;
+    private String pengalamanKerja;
     
     public void createBerkas(){
         
