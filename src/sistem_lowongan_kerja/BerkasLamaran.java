@@ -10,6 +10,10 @@ package sistem_lowongan_kerja;
  * @author Diah Ajeng
  */
 public class BerkasLamaran {
-    //deklarasi variable
+    // Deklarasi Variable
     
+    
+    // Getter and Setter
+    
+    // Method
 }

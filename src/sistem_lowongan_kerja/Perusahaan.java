@@ -11,10 +11,19 @@ import java.util.Date;
  * @author Diah Ajeng
  */
 public class Perusahaan extends Orang{
-    //deklarasi variable
+    // Deklarasi variable
     private Lowongan[] daftarlowongan;
-    
-    public void createLowongan(Date deadline){
+    public Lowongan[] getDaftarlowongan(){    
+        return daftarlowongan;
         
+    }
+
+    // Getter and Setter
+    public void setDaftarlowongan(Lowongan[] daftarlowongan) {    
+        this.daftarlowongan = daftarlowongan;
+    }
+
+    //Method
+    public void createLowongan(Date deadline) {
     }
 }

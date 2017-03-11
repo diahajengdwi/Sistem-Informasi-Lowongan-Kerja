@@ -10,7 +10,7 @@ import java.util.Date;
  * @author Diah Ajeng
  */
 public class Orang {
-    //deklarasi variable
+    // Deklarasi variable
     private String nama;
     private String jk;
     private String tempatLahir;
@@ -18,6 +18,8 @@ public class Orang {
     private String noTelp;
     private String email;
 
+    
+    // Getter and Setter
     public String getNama() {
         return nama;
     }
