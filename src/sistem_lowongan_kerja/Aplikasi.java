@@ -5,29 +5,31 @@
  */
 package sistem_lowongan_kerja;
 
+import java.util.List;
+
 /**
  *
  * @author Diah Ajeng
  */
 public class Aplikasi {
-    //deklarasi variable
-    private Perusahaan[] daftarPerusahaan;
-    private Pelamar[] daftarPelamar;
+    // Deklarasi variable
+    private List<Perusahaan> daftarPerusahaan;
+    private List<Pelamar> daftarPelamar;
     
-    public void addPerusahaan(){
-        
+    public void addPerusahaan(Perusahaan p){
+        daftarPerusahaan.add(p);
     }
     
-    public void addPelamar(){
-        
+    public void addPelamar(Pelamar p){
+        daftarPelamar.add(p);
     }
 
     public Pelamar getDaftarPelamar(int id) {
-        return daftarPelamar[id];
+        return daftarPelamar.get(id);
     }
     
     public void deletePelamar(int id){
-        
+        daftarPelamar.remove(id);
     }
     
     public void mainMenu(){

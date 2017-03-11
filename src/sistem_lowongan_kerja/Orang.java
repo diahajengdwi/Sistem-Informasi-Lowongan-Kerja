@@ -11,6 +11,7 @@ import java.util.Date;
  */
 public class Orang {
     // Deklarasi variable
+    private int id;
     private String nama;
     private String jk;
     private String tempatLahir;
@@ -18,8 +19,26 @@ public class Orang {
     private String noTelp;
     private String email;
 
+    // Constructor
+    public Orang(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email){
+        this.id = id;
+        this.nama = nama;
+        this.jk = jk;
+        this.tempatLahir = tempatLahir;
+        this.tglLahir = tglLahir;
+        this.noTelp = noTelp;
+        this.email = email;
+    }
     
     // Getter and Setter
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNama() {
         return nama;
     }
