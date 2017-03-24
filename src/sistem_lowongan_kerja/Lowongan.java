@@ -5,6 +5,7 @@
  */
 package sistem_lowongan_kerja;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,6 +17,7 @@ public class Lowongan{
     private int idLowongan;
     private List<BerkasLamaran> berkasMasuk;
     private List<BerkasLamaran> berkasDiterima;
+    private Date deadline;
     
     // Getter and Setter
     public void setIdLowongan(int idLowongan) {
@@ -45,10 +47,26 @@ public class Lowongan{
         return berkasDiterima.get(id);
     }
 
+    public List<BerkasLamaran> getBerkasMasuk() {
+        return berkasMasuk;
+    }
+
+    public List<BerkasLamaran> getBerkasDiterima() {
+        return berkasDiterima;
+    }
+    
     public void setBerkasDiterima(List<BerkasLamaran> berkasDiterima) {
         this.berkasDiterima = berkasDiterima;
     }
 
+    public Date getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
+    }
+    
     // Method
     public void addBerkas(BerkasLamaran b) {
         berkasMasuk.add(b);

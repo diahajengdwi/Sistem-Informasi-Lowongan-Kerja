@@ -21,11 +21,25 @@ public class Perusahaan extends Orang{
     private Date tglLahir;
     private String noTelp;
     private String email;
+    private String password;
+    private String nmPerusahaan;
+    private String jenis;
+    private String kat;
+    private int karyawan;
     Lowongan l = new Lowongan();
 
     // Constructor
-    public Perusahaan(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email){
-        super(id, nama, jk, tempatLahir, tglLahir, noTelp, email);
+    public Perusahaan(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String password, String nmPerusahaan){
+        super(id, nama, jk, tempatLahir, tglLahir, noTelp, email, password);
+        this.nmPerusahaan = nmPerusahaan;
+    }
+    
+    public Perusahaan(int id, String nmPerusahaan, String noTelp, String jenis, String kat, int karyawan, String nama, String email, String password){
+        super(id, nama, noTelp, email, password);
+        this.nmPerusahaan = nmPerusahaan;
+        this.jenis = jenis;
+        this.kat = kat;
+        this.karyawan = karyawan;
     }
     
     // Getter and Setter
@@ -39,10 +53,29 @@ public class Perusahaan extends Orang{
         }
         return null;
     }
+
+    public List<Lowongan> getDaftarLowongan() {
+        return daftarLowongan;
+    }
+
+    public void setDaftarLowongan(List<Lowongan> daftarLowongan) {
+        this.daftarLowongan = daftarLowongan;
+    }
     
+    public String getNmPerusahaan() {
+        return nmPerusahaan;
+    }
+
+    public void setNmPerusahaan(String nmPerusahaan) {
+        this.nmPerusahaan = nmPerusahaan;
+    }
+      
     //Method
     public void createLowongan(Date deadline) {
         daftarLowongan.add(l);
+        int n = daftarLowongan.size();
+        daftarLowongan.get(n-1).setIdLowongan(daftarLowongan.get(n-1).getIdLowongan()+1);
+        daftarLowongan.get(n-1).setDeadline(deadline);
     }
     
     public void removeLowongan(int id){

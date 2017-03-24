@@ -21,10 +21,16 @@ public class Pelamar extends Orang {
     private Date tglLahir;
     private String noTelp;
     private String email;
+    private String password;
     BerkasLamaran b = new BerkasLamaran();
+    
     // Constructor
-    public Pelamar(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email){
-        super(id, nama, jk, tempatLahir, tglLahir, noTelp, email);
+    public Pelamar(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String password){
+        super(id, nama, jk, tempatLahir, tglLahir, noTelp, email, password);
+    }
+    
+    public Pelamar(int id, String nama, String email, String password){
+        super(id, nama, email, password);
     }
     
     // Getter and Setter

@@ -18,9 +18,10 @@ public class Orang {
     private Date tglLahir;
     private String noTelp;
     private String email;
+    private String password;
 
     // Constructor
-    public Orang(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email){
+    public Orang(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String Password){
         this.id = id;
         this.nama = nama;
         this.jk = jk;
@@ -28,6 +29,22 @@ public class Orang {
         this.tglLahir = tglLahir;
         this.noTelp = noTelp;
         this.email = email;
+        this.password = password;
+    }
+    
+    public Orang(int id, String nama, String email, String Password){
+        this.id = id;
+        this.nama = nama;
+        this.email = email;
+        this.password = password;
+    }
+    
+    public Orang(int id, String nama, String noTelp, String email, String Password){
+        this.id = id;
+        this.nama = nama;
+        this.noTelp = noTelp;
+        this.email = email;
+        this.password = password;
     }
     
     // Getter and Setter
@@ -87,5 +104,13 @@ public class Orang {
         this.email = email;
     }
     
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
     
+    // Method
 }
