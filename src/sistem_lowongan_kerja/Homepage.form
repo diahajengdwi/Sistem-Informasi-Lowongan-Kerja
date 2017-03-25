@@ -112,7 +112,7 @@
     <Component class="javax.swing.JButton" name="btnpelamar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Pelamar\1490017369_briefcase.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\pelamar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Pelamar Kerja"/>
         <Property name="actionCommand" type="java.lang.String" value="Pencari Kerja"/>
@@ -129,7 +129,7 @@
     <Component class="javax.swing.JButton" name="btndaftar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Daftar\1490017691_constr_autoteller_machine.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\daftar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Daftar Akun"/>
         <Property name="horizontalAlignment" type="int" value="2"/>
@@ -145,7 +145,7 @@
     <Component class="javax.swing.JButton" name="btnperusahaan">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Perusahaan\1490017597_constr_bank_office.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\perusahaan.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Perusahaan"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -167,7 +167,7 @@
     <Component class="javax.swing.JButton" name="btncari">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Cari\1490017462_magnifier_glass.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\cari.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cari Lowongan Kerja"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -218,7 +218,7 @@
               <Font name="Tahoma" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Perusahaan\1490017593_architecture-interior-03.png"/>
+              <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\logo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sistem Lowongan Kerja"/>
           </Properties>
@@ -256,7 +256,7 @@
     <Component class="javax.swing.JButton" name="btnclose">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\1490018617_Close_Icon_Dark.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\keluar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Keluar"/>
         <Property name="horizontalAlignment" type="int" value="2"/>

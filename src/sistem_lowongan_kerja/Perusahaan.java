@@ -15,13 +15,6 @@ public class Perusahaan extends Orang{
     // Deklarasi variable
     private List<Lowongan> daftarLowongan;
     private int id;
-    private String nama;
-    private String jk;
-    private String tempatLahir;
-    private Date tglLahir;
-    private String noTelp;
-    private String email;
-    private String password;
     private String nmPerusahaan;
     private String jenis;
     private String kat;
@@ -55,7 +48,11 @@ public class Perusahaan extends Orang{
     }
 
     public List<Lowongan> getDaftarLowongan() {
-        return daftarLowongan;
+        if(daftarLowongan.isEmpty()){
+            return null;
+        }else{
+            return daftarLowongan;
+        }
     }
 
     public void setDaftarLowongan(List<Lowongan> daftarLowongan) {
@@ -81,4 +78,19 @@ public class Perusahaan extends Orang{
     public void removeLowongan(int id){
         daftarLowongan.remove(id);
     }
+
+    @Override
+    public String toString() {
+        return "Perusahaan{" + "daftarLowongan=" + daftarLowongan + ", id=" + id + ", nmPerusahaan=" + nmPerusahaan + ", jenis=" + jenis + ", kat=" + kat + ", karyawan=" + karyawan + ", l=" + l + '}';
+        
+        
+        
+        String namaMk = "Nama Matakuliah = " + this.namaMk;
+        String jumlahSks = "SKS = " + this.jumlahSks;
+        String wajib = "Wajib = " + getWajib();
+        
+        return namaMk + '\n' + jumlahSks + '\n' + wajib + '\n';
+    }
+    
+    
 }

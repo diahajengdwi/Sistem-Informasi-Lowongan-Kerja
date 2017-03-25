@@ -44,7 +44,7 @@ public class Loginpage extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 204, 204));
 
-        btnkeluar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\1490042039_Close_Icon_Dark.png")); // NOI18N
+        btnkeluar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\keluar.png")); // NOI18N
         btnkeluar.setText("Keluar");
         btnkeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,7 +53,7 @@ public class Loginpage extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Perusahaan\\1490017593_architecture-interior-03.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\logo.png")); // NOI18N
         jLabel3.setText("Sistem Lowongan Kerja");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -64,7 +64,7 @@ public class Loginpage extends javax.swing.JFrame {
                 .addGap(139, 139, 139)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(btnkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                .addComponent(btnkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(26, 26, 26))
         );
         jPanel3Layout.setVerticalGroup(
@@ -81,11 +81,11 @@ public class Loginpage extends javax.swing.JFrame {
 
         jLabel2.setText("Kata Sandi");
 
-        btnmasuk.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\1490122755_2.png")); // NOI18N
+        btnmasuk.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\masuk.png")); // NOI18N
         btnmasuk.setText("Masuk");
         btnmasuk.setPreferredSize(new java.awt.Dimension(83, 25));
 
-        btndaftar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Daftar\\1490041704_constr_autoteller_machine.png")); // NOI18N
+        btndaftar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\data.png")); // NOI18N
         btndaftar.setText("Daftar");
         btndaftar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btndaftar.addActionListener(new java.awt.event.ActionListener() {

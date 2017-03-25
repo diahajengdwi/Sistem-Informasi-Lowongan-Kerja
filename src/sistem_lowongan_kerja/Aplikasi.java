@@ -45,6 +45,10 @@ public class Aplikasi {
         System.out.println("Pilihan");
         System.out.println("1. Daftar Pelamar");
         System.out.println("2. Lihat Lowongan");
+        System.out.println("3. Buat Lowongan");
+        System.out.println("4. Hapus Lowongan");
+        System.out.println("5. Lihat Berkas Lamaran Masuk");
+        System.out.println("6. Lihat Berkas Lamaran Di Terima");
         System.out.println("0. Logout");
         System.out.print("Masukkan Pilihan : ");
     }
@@ -126,6 +130,7 @@ public class Aplikasi {
         System.out.println("1. Daftar Lamaran");
         System.out.println("2. Profil");
         System.out.println("3. Setting");
+        System.out.println("4. Membuat Berkas");
         System.out.println("0. Logout");
         System.out.print("Masukkan Pilihan : ");
     }
@@ -161,13 +166,7 @@ public class Aplikasi {
             default : 
                 System.out.println("No Telp       : ");
                 break;
-        }
-        
-        
-        
-        
-        
-        
+        }   
     }
     
     public void daftarMenu(){

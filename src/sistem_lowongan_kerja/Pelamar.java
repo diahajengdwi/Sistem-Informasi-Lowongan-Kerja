@@ -15,13 +15,7 @@ import java.util.List;
 public class Pelamar extends Orang {
     // Deklarasi Variable
     private BerkasLamaran berkas;
-    private String nama;
-    private String jk;
-    private String tempatLahir;
-    private Date tglLahir;
-    private String noTelp;
-    private String email;
-    private String password;
+    private int idPelamar;
     BerkasLamaran b = new BerkasLamaran();
     
     // Constructor

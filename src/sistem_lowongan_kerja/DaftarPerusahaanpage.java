@@ -55,11 +55,11 @@ public class DaftarPerusahaanpage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
-        btnkeluar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\1490042039_Close_Icon_Dark.png")); // NOI18N
+        btnkeluar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\keluar.png")); // NOI18N
         btnkeluar.setText("Keluar");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Perusahaan\\1490017593_architecture-interior-03.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\logo.png")); // NOI18N
         jLabel5.setText("Sistem Lowongan Kerja");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -67,7 +67,7 @@ public class DaftarPerusahaanpage extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+                .addContainerGap(90, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(26, 26, 26)
                 .addComponent(btnkeluar)
@@ -129,7 +129,7 @@ public class DaftarPerusahaanpage extends javax.swing.JFrame {
 
         txtpwd.setPreferredSize(new java.awt.Dimension(6, 27));
 
-        btndaftar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Daftar\\1490041704_constr_autoteller_machine.png")); // NOI18N
+        btndaftar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\daftarperusahaan.png")); // NOI18N
         btndaftar.setText("Daftar");
         btndaftar.setPreferredSize(new java.awt.Dimension(85, 33));
         btndaftar.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +138,7 @@ public class DaftarPerusahaanpage extends javax.swing.JFrame {
             }
         });
 
-        btnbatal.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\1490124707_cancel.png")); // NOI18N
+        btnbatal.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\batal.png")); // NOI18N
         btnbatal.setText("Batal");
         btnbatal.setPreferredSize(new java.awt.Dimension(85, 33));
         btnbatal.addActionListener(new java.awt.event.ActionListener() {

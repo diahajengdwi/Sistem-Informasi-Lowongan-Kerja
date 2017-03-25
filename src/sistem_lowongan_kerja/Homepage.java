@@ -66,7 +66,7 @@ public class Homepage extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setName("Halaman Utama"); // NOI18N
 
-        btnpelamar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Pelamar\\1490017369_briefcase.png")); // NOI18N
+        btnpelamar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\pelamar.png")); // NOI18N
         btnpelamar.setText("Pelamar Kerja");
         btnpelamar.setActionCommand("Pencari Kerja");
         btnpelamar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -74,14 +74,14 @@ public class Homepage extends javax.swing.JFrame {
         btnpelamar.setMinimumSize(new java.awt.Dimension(167, 41));
         btnpelamar.setName(""); // NOI18N
 
-        btndaftar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Daftar\\1490017691_constr_autoteller_machine.png")); // NOI18N
+        btndaftar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\daftar.png")); // NOI18N
         btndaftar.setText("Daftar Akun");
         btndaftar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btndaftar.setMaximumSize(new java.awt.Dimension(142, 142));
         btndaftar.setMinimumSize(new java.awt.Dimension(167, 41));
         btndaftar.setName(""); // NOI18N
 
-        btnperusahaan.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Perusahaan\\1490017597_constr_bank_office.png")); // NOI18N
+        btnperusahaan.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\perusahaan.png")); // NOI18N
         btnperusahaan.setText("Perusahaan");
         btnperusahaan.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnperusahaan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -94,7 +94,7 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        btncari.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Cari\\1490017462_magnifier_glass.png")); // NOI18N
+        btncari.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\cari.png")); // NOI18N
         btncari.setText("Cari Lowongan Kerja");
         btncari.setMaximumSize(new java.awt.Dimension(142, 142));
         btncari.setName(""); // NOI18N
@@ -107,7 +107,7 @@ public class Homepage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Perusahaan\\1490017593_architecture-interior-03.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\logo.png")); // NOI18N
         jLabel1.setText("Sistem Lowongan Kerja");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -147,7 +147,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGap(0, 52, Short.MAX_VALUE)
         );
 
-        btnclose.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\1490018617_Close_Icon_Dark.png")); // NOI18N
+        btnclose.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\keluar.png")); // NOI18N
         btnclose.setText("Keluar");
         btnclose.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnclose.setMaximumSize(new java.awt.Dimension(142, 142));

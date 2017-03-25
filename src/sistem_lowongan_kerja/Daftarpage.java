@@ -39,9 +39,10 @@ public class Daftarpage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\logo.png")); // NOI18N
         jLabel1.setText("Pilih jenis pendaftaran.");
 
-        btnkeluar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\1490042039_Close_Icon_Dark.png")); // NOI18N
+        btnkeluar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\keluar.png")); // NOI18N
         btnkeluar.setText("Keluar");
         btnkeluar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnkeluar.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +56,7 @@ public class Daftarpage extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
+                .addContainerGap(88, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(29, 29, 29)
                 .addComponent(btnkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -71,10 +72,10 @@ public class Daftarpage extends javax.swing.JFrame {
                 .addGap(31, 31, 31))
         );
 
-        btnperusahaan.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Perusahaan\\1490017597_constr_bank_office.png")); // NOI18N
+        btnperusahaan.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\daftarperusahaan.png")); // NOI18N
         btnperusahaan.setText("Perusahaan");
 
-        btnpelamar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Downloads\\Icon\\Pelamar\\1490017369_briefcase.png")); // NOI18N
+        btnpelamar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diah Ajeng\\Documents\\GitHub\\Sistem_Lowongan_Kerja\\icon\\pelamar.png")); // NOI18N
         btnpelamar.setText("Pelamar");
         btnpelamar.setPreferredSize(new java.awt.Dimension(125, 41));
 
@@ -96,7 +97,7 @@ public class Daftarpage extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnperusahaan)
+                    .addComponent(btnperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnpelamar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24))
         );

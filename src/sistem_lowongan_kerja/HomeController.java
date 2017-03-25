@@ -5,6 +5,7 @@
  */
 package sistem_lowongan_kerja;
 
+import sistem_lowongan_kerja.Controller.CariController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;

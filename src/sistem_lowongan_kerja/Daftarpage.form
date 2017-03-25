@@ -39,7 +39,7 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="27" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnperusahaan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnperusahaan" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="btnpelamar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -59,7 +59,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="152" max="32767" attributes="0"/>
+                  <EmptySpace pref="88" max="32767" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="btnkeluar" max="32767" attributes="0"/>
@@ -83,13 +83,16 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\logo.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Pilih jenis pendaftaran."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnkeluar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\1490042039_Close_Icon_Dark.png"/>
+              <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\keluar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Keluar"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
@@ -103,7 +106,7 @@
     <Component class="javax.swing.JButton" name="btnperusahaan">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Perusahaan\1490017597_constr_bank_office.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\daftarperusahaan.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Perusahaan"/>
       </Properties>
@@ -111,7 +114,7 @@
     <Component class="javax.swing.JButton" name="btnpelamar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Diah Ajeng\Downloads\Icon\Pelamar\1490017369_briefcase.png"/>
+          <Image iconType="2" name="C:\Users\Diah Ajeng\Documents\GitHub\Sistem_Lowongan_Kerja\icon\pelamar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Pelamar"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
