@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package Data;
 
 import java.util.Date;
 import java.util.List;
@@ -73,6 +73,7 @@ public class Perusahaan extends Orang{
         int n = daftarLowongan.size();
         daftarLowongan.get(n-1).setIdLowongan(daftarLowongan.get(n-1).getIdLowongan()+1);
         daftarLowongan.get(n-1).setDeadline(deadline);
+        
     }
     
     public void removeLowongan(int id){
@@ -82,14 +83,6 @@ public class Perusahaan extends Orang{
     @Override
     public String toString() {
         return "Perusahaan{" + "daftarLowongan=" + daftarLowongan + ", id=" + id + ", nmPerusahaan=" + nmPerusahaan + ", jenis=" + jenis + ", kat=" + kat + ", karyawan=" + karyawan + ", l=" + l + '}';
-        
-        
-        
-        String namaMk = "Nama Matakuliah = " + this.namaMk;
-        String jumlahSks = "SKS = " + this.jumlahSks;
-        String wajib = "Wajib = " + getWajib();
-        
-        return namaMk + '\n' + jumlahSks + '\n' + wajib + '\n';
     }
     
     

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package View;
 
 import java.awt.event.ActionListener;
 
@@ -145,15 +145,15 @@ public class Daftarpage extends javax.swing.JFrame {
         });
     }
     
-    void addListenkeluar(ActionListener listenbtnkeluar){
+    public void addListenkeluar(ActionListener listenbtnkeluar){
         btnkeluar.addActionListener(listenbtnkeluar);
     }
     
-    void addListenpelamar(ActionListener listenbtnpelamar){
+    public void addListenpelamar(ActionListener listenbtnpelamar){
         btnpelamar.addActionListener(listenbtnpelamar);
     }
     
-    void addListenperusahaan(ActionListener listenbtnperusahaan){
+    public void addListenperusahaan(ActionListener listenbtnperusahaan){
         btnperusahaan.addActionListener(listenbtnperusahaan);
     }
 

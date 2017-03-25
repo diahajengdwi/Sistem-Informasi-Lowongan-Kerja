@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package Data;
 import java.util.Date;
 /**
  *
  * @author Diah Ajeng
  */
-public class Orang {
+abstract public class Orang {
     // Deklarasi variable
     private int id;
     private String nama;

@@ -3,9 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package Controller;
 
-import sistem_lowongan_kerja.Controller.CariController;
+import Controller.CariController;
+import Model.Model;
+import View.Caripage;
+import View.Daftarpage;
+import View.Homepage;
+import View.Loginpage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;

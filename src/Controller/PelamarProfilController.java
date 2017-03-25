@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package Controller;
+
+import Model.Model;
+import View.PelamarProfilpage;
 
 /**
  *

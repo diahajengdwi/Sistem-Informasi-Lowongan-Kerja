@@ -3,22 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package Controller;
 
+import Model.Model;
+import View.DaftarPerusahaanpage;
+import View.Daftarpage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.Action;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Diah Ajeng
  */
-public class DaftarPelamarController {
-    private DaftarPelamarpage view;
+public class DaftarPerusahaanController {
+    private DaftarPerusahaanpage view;
     private Model model;
     
-    public DaftarPelamarController(DaftarPelamarpage view, Model model){
+    public DaftarPerusahaanController(DaftarPerusahaanpage view, Model model){
         this.view = view;
         this.model = model;
         this.view.addListenkeluar(new ActionListener(){
@@ -35,32 +37,13 @@ public class DaftarPelamarController {
             public void actionPerformed(ActionEvent e) {
                 int selectedOption = JOptionPane.showConfirmDialog(null,"Apakah anda yakin akan membatalkan pendaftaran?", "Informasi", JOptionPane.YES_NO_OPTION);
                 if (selectedOption == JOptionPane.YES_OPTION) {
-                    view.reset();
+                        //keluar
                 }
             }
         });
         this.view.addListendaftar(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nama = null;
-                String email = null;
-                String pass = null;
-                nama = view.getNama();
-                email = view.getEmail();
-                if(view.getPass().equals(view.getPwd())){
-                    pass = view.getPwd();
-                    //insert data
-                    //model.setPe(a, b);
-                    JOptionPane.showMessageDialog(null, "Berhasil!");
-                    view.reset();
-                }else if(nama.equals("") || email.equals("") || view.getPass().equals("") || view.getPwd().equals("")){
-                    JOptionPane.showMessageDialog(null, "Data Tidak Boleh Kosong!");
-                    view.reset();
-                }else{
-                    JOptionPane.showMessageDialog(null, "Kata Sandi Tidak Sama!");
-                    view.setPass();
-                    view.setPwd();
-                } 
             }
         });
     }

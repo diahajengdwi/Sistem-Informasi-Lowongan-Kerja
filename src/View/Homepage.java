@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package View;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -249,23 +249,23 @@ public class Homepage extends javax.swing.JFrame {
         });
     }
     
-    void addListencari(ActionListener listenbtncari){
+    public void addListencari(ActionListener listenbtncari){
         btncari.addActionListener(listenbtncari);
     }
     
-    void addListenDaftar(ActionListener listenbtnDaftar){
+    public void addListenDaftar(ActionListener listenbtnDaftar){
         btndaftar.addActionListener(listenbtnDaftar);
     }
     
-    void addListenPelamar(ActionListener listenbtnPelamar){
+    public void addListenPelamar(ActionListener listenbtnPelamar){
         btnpelamar.addActionListener(listenbtnPelamar);
     }
     
-    void addListenPerusahaan(ActionListener listenbtnPerusahaan){
+    public void addListenPerusahaan(ActionListener listenbtnPerusahaan){
         btnperusahaan.addActionListener(listenbtnPerusahaan);
     }
     
-    void addListenClose(ActionListener listenbtnClose){
+    public void addListenClose(ActionListener listenbtnClose){
         btnclose.addActionListener(listenbtnClose);
     }
 

@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistem_lowongan_kerja;
+package Controller;
+
+import View.Caripage;
+import Model.Model;
 
 /**
  *
  * @author Diah Ajeng
  */
-public class PelamarSetController {
-    private PelamarSetpage view;
+public class CariController {
+    private Caripage view;
     private Model model;
-
-    public PelamarSetController(PelamarSetpage view, Model model) {
-        this.view = view;
-        this.model = model;
+    
+    public CariController(Caripage view, Model model){
+        
     }
 }
