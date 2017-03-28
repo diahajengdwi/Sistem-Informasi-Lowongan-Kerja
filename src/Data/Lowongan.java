@@ -5,8 +5,10 @@
  */
 package Data;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.text.ParseException;
 
 /**
  *
@@ -48,7 +50,11 @@ public class Lowongan{
     }
 
     public List<BerkasLamaran> getBerkasMasuk() {
-        return berkasMasuk;
+        if(berkasMasuk.isEmpty()){
+            return null;
+        }else{
+            return berkasMasuk;
+        }
     }
 
     public List<BerkasLamaran> getBerkasDiterima() {
@@ -78,5 +84,10 @@ public class Lowongan{
         
     public void terimaBerkas(BerkasLamaran b){
         berkasDiterima.add(b);
+    }
+
+    @Override
+    public String toString() {
+        return "Lowongan{" + "idLowongan=" + idLowongan + ", berkasMasuk=" + berkasMasuk + ", berkasDiterima=" + berkasDiterima + ", deadline=" + deadline + '}';
     }
 }

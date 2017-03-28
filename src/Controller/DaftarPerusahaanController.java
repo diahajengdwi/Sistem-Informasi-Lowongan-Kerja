@@ -37,13 +37,28 @@ public class DaftarPerusahaanController {
             public void actionPerformed(ActionEvent e) {
                 int selectedOption = JOptionPane.showConfirmDialog(null,"Apakah anda yakin akan membatalkan pendaftaran?", "Informasi", JOptionPane.YES_NO_OPTION);
                 if (selectedOption == JOptionPane.YES_OPTION) {
-                        //keluar
+                    view.reset();
                 }
             }
         });
         this.view.addListendaftar(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(view.getPass().equals(view.getPwd())){
+                    try{
+                        model.addPerusahaan(view.getNamaPerusahaan(), view.getNoTelp(), view.getJenis(), view.getKategori(), view.getKaryawan(), view.getNama(), view.getEmail(), view.getPwd());
+                        JOptionPane.showMessageDialog(null, "Berhasil!");
+                    }catch(Exception ex){
+                        JOptionPane.showMessageDialog(null, "Terdapat kesalahan!");
+                    }
+                    view.reset();
+                }else if(view.getEmail().equals("") || view.getNama().equals("") || view.getPass().equals("") || view.getPwd().equals("")){
+                    JOptionPane.showMessageDialog(null, "Data Tidak Boleh Kosong!");
+                    view.reset();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Kata Sandi Tidak Sama!");
+                    view.setPass();
+                } 
             }
         });
     }

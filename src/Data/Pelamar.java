@@ -14,39 +14,51 @@ import java.util.List;
  */
 public class Pelamar extends Orang {
     // Deklarasi Variable
-    private BerkasLamaran berkas;
+    private BerkasLamaran b;
     private int idPelamar;
-    BerkasLamaran b = new BerkasLamaran();
     
     // Constructor
     public Pelamar(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String password){
         super(id, nama, jk, tempatLahir, tglLahir, noTelp, email, password);
+        b = new BerkasLamaran();
     }
     
     public Pelamar(int id, String nama, String email, String password){
         super(id, nama, email, password);
+        b = new BerkasLamaran();
+    }
+
+    // Getter and Setter
+    public void setIdPelamar(int idPelamar) {    
+        this.idPelamar = idPelamar;
     }
     
-    // Getter and Setter
- 
+    public int getIdPelamar(){    
+        return idPelamar;
+    }
+
+    public BerkasLamaran getB() {
+        return b;
+    }
+
+    public void setB(BerkasLamaran b) {
+        this.b = b;
+    }    
+    
     // Method
-    public void createBerkas(int idBerkas, double ipk, List<String> gelar, List<String> skill, List<String> bahasa, List<String> pengalamanKerja, List<String> pengalamanOrganisasi){
-        b.setIdBerkas(idBerkas);
-        b.setIpk(ipk);
+    public void createBerkas(int idBerkas, List<Gelar> gelar, List<String> skill, List<String> bahasa, List<Pengalaman> pengalamanKerja) {
+        getB().setIdBerkas(idBerkas);
         for (int i = 0; i < gelar.size(); i++) {
-            b.setGelar(gelar.get(i));
+            getB().addGelar(gelar.get(i));
         }
-        for (int i = 0; i < skill.size(); i++) {
-            b.setSkill(skill.get(i));
+        for (int i = 0; i < pengalamanKerja.size(); i++) {
+            getB().addPengalaman(pengalamanKerja.get(i));
+        }
+         for (int i = 0; i < skill.size(); i++) {
+            getB().addSkill(skill.get(i));
         }
         for (int i = 0; i < bahasa.size(); i++) {
-            b.setBahasa(bahasa.get(i));
-        }        
-        for (int i = 0; i < pengalamanKerja.size(); i++) {
-            b.setPengalamanKerja(pengalamanKerja.get(i));
-        }
-        for (int i = 0; i < pengalamanOrganisasi.size(); i++) {
-            b.setPengalamanOrganisasi(pengalamanOrganisasi.get(i));
-        }
+            getB().addBahasa(bahasa.get(i));
+        } 
     }
 }

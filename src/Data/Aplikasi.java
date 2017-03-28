@@ -16,10 +16,20 @@ public class Aplikasi {
     private List<Perusahaan> daftarPerusahaan;
     private List<Pelamar> daftarPelamar;
     
+    // Perusahaan
     public void addPerusahaan(Perusahaan p){
         daftarPerusahaan.add(p);
     }
     
+    public List<Perusahaan> getDaftarPerusahaan(){
+        return daftarPerusahaan;
+    }
+    
+    public List<Lowongan> getDaftarLowongan(int i){
+        return daftarPerusahaan.get(i).getDaftarLowongan();
+    }
+    
+    // Pelamar
     public void addPelamar(Pelamar p){
         daftarPelamar.add(p);
     }
@@ -30,7 +40,8 @@ public class Aplikasi {
     
     public void deletePelamar(int id){
         daftarPelamar.remove(id);
-    }
+    }   
+
     
     // Menu
     public void PerusahaanMenu(){
@@ -57,7 +68,7 @@ public class Aplikasi {
         switch (i) {
             case 1:
                 System.out.println("Silahkan Mendaftar.");
-                System.out.println("=====");
+                System.out.println("==================");
                 System.out.print("Nama Perusahaan   : ");
                 break;
             case 2:
@@ -70,7 +81,7 @@ public class Aplikasi {
                 System.out.print("Kategori          : ");
                 break;
             case 5:
-                System.out.print("Karyawan          : ");
+                System.out.print("Jumlah Karyawan   : ");
                 break;
             case 6:
                 System.out.print("Nama              : ");
@@ -90,7 +101,7 @@ public class Aplikasi {
     public void login(int i){
         if(i == 1){
             System.out.println("Silahkan masukkan kredensial login Anda di bawah ini.");
-            System.out.println("=====");
+            System.out.println("=====================================================");
             System.out.print("Email      : ");
         }
         else{
@@ -110,7 +121,7 @@ public class Aplikasi {
         switch (i) {
             case 1:
                 System.out.println("Silahkan Mendaftar.");
-                System.out.println("=====");
+                System.out.println("===================");
                 System.out.print("Nama              : ");
                 break;
             case 2:
@@ -130,7 +141,7 @@ public class Aplikasi {
         System.out.println("1. Daftar Lamaran");
         System.out.println("2. Profil");
         System.out.println("3. Setting");
-        System.out.println("4. Membuat Berkas");
+        System.out.println("4. Lihat Berkas");
         System.out.println("0. Logout");
         System.out.print("Masukkan Pilihan : ");
     }
@@ -141,30 +152,99 @@ public class Aplikasi {
         System.out.println("2. Bahasa");
         System.out.println("3. Keahlian");
         System.out.println("4. Pengalaman Kerja");
+        System.out.println("5. View Profil");
+        System.out.println("6. Buat Berkas");
         System.out.println("0. Kembali");
-        System.out.println("Masukkan Pilihan : ");
+        System.out.print("Masukkan Pilihan : ");
+    }
+    
+    public void pelamarGelar(int i){
+        switch(i){
+            case 1 :
+                System.out.println("Masukkan data secara benar!");
+                System.out.print("Gelar          : ");
+                break;
+            case 2 :
+                System.out.print("Tahun Masuk    : ");
+                break;
+            case 3 :
+                System.out.print("Tahun Lulus    : ");
+                break;
+            case 4 :
+                System.out.print("Nama Institusi : ");
+                break;
+            case 5 :
+                System.out.print("IPK            : ");
+                break;
+        }
+    }
+    
+    public void pelamarPengalaman(int i){
+        switch(i){
+            case 1 :
+                System.out.print("Nama Pekerjaan : ");
+                break;
+            case 2 :
+                System.out.print("Tahun Masuk    : ");
+                break;
+            case 3 :
+                System.out.print("Tahun Keluar   : ");
+                break;
+            case 4 :
+                System.out.print("Divisi         : ");
+                break;
+            case 5 :
+                System.out.print("Kota           : ");
+                break;
+            case 6 :
+                System.out.print("Provinsi       : ");
+                break;
+        }
+    }
+    
+    public void pelamarBerkas(){
+        System.out.println("Pengaturan / Profil");
+        System.out.println("1. Gelar");
+        System.out.println("2. Bahasa");
+        System.out.println("3. Keahlian");
+        System.out.println("4. Pengalaman Kerja");
+        System.out.println("5. Buat Lamaran");
+        System.out.println("0. Kembali");
+        System.out.print("Masukkan Pilihan : ");
     }
     
     public void pelamarSetting(int i){
         switch(i){
+            case 1 :
+                System.out.println("Pengaturan / Setting");
+                System.out.print("Nama         : ");
+                break;
+            case 2 :
+                System.out.print("Alamat Email : ");
+                break;
+        }
+    }
+    
+    public void pelamarProfil(int i){
+        switch(i){
             case 1 : 
-                System.out.println("Pengaturan / Settings");
-                System.out.println("Nama          : ");
+                System.out.println("Pengaturan / Profil");
+                System.out.print("Nama          : ");
                 break;
             case 2 : 
-                System.out.println("Email         : ");
+                System.out.print("Email         : ");
                 break;
             case 3 : 
-                System.out.println("Jenis Kelamin : ");
+                System.out.print("Jenis Kelamin : ");
                 break;
             case 4 : 
-                System.out.println("Tempat Lahir  : ");
+                System.out.print("Tempat Lahir  : ");
                 break;
             case 5 : 
-                System.out.println("Tanggal Lahir : ");
+                System.out.print("Tanggal Lahir : ");
                 break;
             default : 
-                System.out.println("No Telp       : ");
+                System.out.print("No Telp       : ");
                 break;
         }   
     }

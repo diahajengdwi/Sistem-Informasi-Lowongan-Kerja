@@ -45,24 +45,20 @@ public class DaftarPelamarController {
         this.view.addListendaftar(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nama = null;
-                String email = null;
-                String pass = null;
-                nama = view.getNama();
-                email = view.getEmail();
                 if(view.getPass().equals(view.getPwd())){
-                    pass = view.getPwd();
-                    //insert data
-                    //model.setPe(a, b);
-                    JOptionPane.showMessageDialog(null, "Berhasil!");
+                    try{
+                        model.addPelamar(view.getNama(), view.getEmail(), view.getPwd());
+                        JOptionPane.showMessageDialog(null, "Berhasil!");
+                    }catch(Exception ex){
+                        JOptionPane.showMessageDialog(null, "Terdapat kesalahan!");
+                    }
                     view.reset();
-                }else if(nama.equals("") || email.equals("") || view.getPass().equals("") || view.getPwd().equals("")){
+                }else if(view.getNama().equals("") || view.getEmail().equals("") || view.getPass().equals("") || view.getPwd().equals("")){
                     JOptionPane.showMessageDialog(null, "Data Tidak Boleh Kosong!");
                     view.reset();
                 }else{
                     JOptionPane.showMessageDialog(null, "Kata Sandi Tidak Sama!");
                     view.setPass();
-                    view.setPwd();
                 } 
             }
         });

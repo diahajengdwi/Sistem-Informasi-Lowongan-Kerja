@@ -5,6 +5,7 @@
  */
 package Data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,14 +15,13 @@ import java.util.List;
 public class BerkasLamaran {
     // Deklarasi Variable
     private int idBerkas;
-    private double ipk;
-    private List<String> gelar;
-    private List<String> skill;
-    private List<String> bahasa;
-    private List<String> pengalamanKerja;
-    private List<String> pengalamanOrganisasi;
-        
+    private List<Gelar> gelar = new ArrayList<>();
+    private List<String> skill = new ArrayList<>();
+    private List<String> bahasa = new ArrayList<>();
+    private List<Pengalaman> pengalamanKerja = new ArrayList<>();
+    
     // Getter and Setter
+
     public int getIdBerkas() {
         return idBerkas;
     }
@@ -29,66 +29,69 @@ public class BerkasLamaran {
     public void setIdBerkas(int idBerkas) {
         this.idBerkas = idBerkas;
     }
-    
-    public double getIpk() {
-        return ipk;
+
+    public List<Gelar> getGelar() {
+        if(gelar.isEmpty()){
+            return null;
+        }else{
+            return gelar;
+        }
     }
 
-    public void setIpk(double ipk) {
-        this.ipk = ipk;
-    }
-
-    public List<String> getGelar() {
-        return gelar;
-    }
-
-    public void setGelar(String gelar) {
-        this.gelar.add(gelar);
+    public void setGelar(List<Gelar> gelar) {
+        this.gelar = gelar;
     }
 
     public List<String> getSkill() {
-        return skill;
+        if(skill.isEmpty()){
+            return null;
+        }else{
+            return skill;
+        }
     }
 
-    public void setSkill(String skill) {
-        this.skill.add(skill);
+    public void setSkill(List<String> skill) {
+        this.skill = skill;
     }
 
     public List<String> getBahasa() {
-        return bahasa;
+        if(bahasa.isEmpty()){
+            return null;
+        }else{
+            return bahasa;
+        }
     }
 
-    public void setBahasa(String bahasa) {
-        this.bahasa.add(bahasa);
+    public void setBahasa(List<String> bahasa) {
+        this.bahasa = bahasa;
     }
 
-    public List<String> getPengalamanKerja() {
-        return pengalamanKerja;
+    public List<Pengalaman> getPengalamanKerja() {
+        if(pengalamanKerja.isEmpty()){
+            return null;
+        }else{
+            return pengalamanKerja;
+        }
     }
 
-    public void setPengalamanKerja(String pengalamanKerja) {
-        this.pengalamanKerja.add(pengalamanKerja);
-    }
-
-    public List<String> getPengalamanOrganisasi() {
-        return pengalamanOrganisasi;
-    }
-
-    public void setPengalamanOrganisasi(String pengalamanOrganisasi) {
-        this.pengalamanOrganisasi.add(pengalamanOrganisasi);
+    public void setPengalamanKerja(List<Pengalaman> pengalamanKerja) {
+        this.pengalamanKerja = pengalamanKerja;
     }
     
+   
     // Method
-    public void addPengalamanKerja(String p) {
-        pengalamanKerja.add(p);
+
+    @Override
+    public String toString() {
+        return "BerkasLamaran{" + "idBerkas=" + idBerkas + ", gelar=" + gelar + ", skill=" + skill + ", bahasa=" + bahasa + ", pengalamanKerja=" + pengalamanKerja + '}';
     }
     
-    public void addPengalamanOrganisasi(String or){
-        pengalamanOrganisasi.add(or);
-    }
-    
-    public void addGelar(String g){
+    public void addGelar(Gelar g){
         gelar.add(g);
+    }
+    
+    public void addPengalaman(Pengalaman p){
+        pengalamanKerja.add(p);
     }
     
     public void addSkill(String s){
@@ -97,5 +100,9 @@ public class BerkasLamaran {
     
     public void addBahasa(String b){
         bahasa.add(b);
+    }
+
+    void addSkill(List<String> skill) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

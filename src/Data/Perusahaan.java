@@ -5,8 +5,12 @@
  */
 package Data;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 /**
  *
  * @author Diah Ajeng
@@ -25,6 +29,7 @@ public class Perusahaan extends Orang{
     public Perusahaan(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String password, String nmPerusahaan){
         super(id, nama, jk, tempatLahir, tglLahir, noTelp, email, password);
         this.nmPerusahaan = nmPerusahaan;
+        daftarLowongan = new ArrayList<Lowongan>() {};
     }
     
     public Perusahaan(int id, String nmPerusahaan, String noTelp, String jenis, String kat, int karyawan, String nama, String email, String password){
@@ -33,6 +38,7 @@ public class Perusahaan extends Orang{
         this.jenis = jenis;
         this.kat = kat;
         this.karyawan = karyawan;
+        daftarLowongan = new ArrayList<Lowongan>() {};
     }
     
     // Getter and Setter
@@ -70,10 +76,9 @@ public class Perusahaan extends Orang{
     //Method
     public void createLowongan(Date deadline) {
         daftarLowongan.add(l);
-        int n = daftarLowongan.size();
-        daftarLowongan.get(n-1).setIdLowongan(daftarLowongan.get(n-1).getIdLowongan()+1);
-        daftarLowongan.get(n-1).setDeadline(deadline);
-        
+        int n = daftarLowongan.size()-1;
+        daftarLowongan.get(n).setIdLowongan(1);
+        daftarLowongan.get(n).setDeadline(deadline);
     }
     
     public void removeLowongan(int id){
@@ -83,7 +88,6 @@ public class Perusahaan extends Orang{
     @Override
     public String toString() {
         return "Perusahaan{" + "daftarLowongan=" + daftarLowongan + ", id=" + id + ", nmPerusahaan=" + nmPerusahaan + ", jenis=" + jenis + ", kat=" + kat + ", karyawan=" + karyawan + ", l=" + l + '}';
-    }
-    
-    
+    }  
+
 }

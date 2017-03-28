@@ -29,14 +29,14 @@ abstract public class Orang {
         this.tglLahir = tglLahir;
         this.noTelp = noTelp;
         this.email = email;
-        this.password = password;
+        this.password = Password;
     }
     
     public Orang(int id, String nama, String email, String Password){
         this.id = id;
         this.nama = nama;
         this.email = email;
-        this.password = password;
+        this.password = Password;
     }
     
     public Orang(int id, String nama, String noTelp, String email, String Password){
@@ -44,7 +44,7 @@ abstract public class Orang {
         this.nama = nama;
         this.noTelp = noTelp;
         this.email = email;
-        this.password = password;
+        this.password = Password;
     }
     
     // Getter and Setter
