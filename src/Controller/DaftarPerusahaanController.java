@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
-import Model.Model;
+import Model.Aplikasi;
+import Model.Perusahaan;
 import View.DaftarPerusahaanpage;
 import View.Daftarpage;
 import java.awt.event.ActionEvent;
@@ -18,9 +14,9 @@ import javax.swing.JOptionPane;
  */
 public class DaftarPerusahaanController {
     private DaftarPerusahaanpage view;
-    private Model model;
+    private Aplikasi model;
     
-    public DaftarPerusahaanController(DaftarPerusahaanpage view, Model model){
+    public DaftarPerusahaanController(DaftarPerusahaanpage view, Aplikasi model){
         this.view = view;
         this.model = model;
         this.view.addListenkeluar(new ActionListener(){
@@ -46,7 +42,11 @@ public class DaftarPerusahaanController {
             public void actionPerformed(ActionEvent e) {
                 if(view.getPass().equals(view.getPwd())){
                     try{
-                        model.addPerusahaan(view.getNamaPerusahaan(), view.getNoTelp(), view.getJenis(), view.getKategori(), view.getKaryawan(), view.getNama(), view.getEmail(), view.getPwd());
+                        if(model.getDaftarPerusahaan()==null){
+                            model.addPerusahaan(new Perusahaan(0, view.getNamaPerusahaan(), view.getNoTelp(), view.getJenis(), view.getKategori(), view.getKaryawan(), view.getNama(), view.getEmail(), view.getPwd()));
+                        }else{
+                            model.addPerusahaan(new Perusahaan(model.getDaftarPerusahaan().size(), view.getNamaPerusahaan(), view.getNoTelp(), view.getJenis(), view.getKategori(), view.getKaryawan(), view.getNama(), view.getEmail(), view.getPwd()));
+                        }
                         JOptionPane.showMessageDialog(null, "Berhasil!");
                     }catch(Exception ex){
                         JOptionPane.showMessageDialog(null, "Terdapat kesalahan!");

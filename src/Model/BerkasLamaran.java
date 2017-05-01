@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
+package Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +9,7 @@ import java.util.List;
  */
 public class BerkasLamaran {
     // Deklarasi Variable
-    private int idBerkas;
+    private int idBerkas = -1;
     private List<Gelar> gelar = new ArrayList<>();
     private List<String> skill = new ArrayList<>();
     private List<String> bahasa = new ArrayList<>();
@@ -100,9 +95,5 @@ public class BerkasLamaran {
     
     public void addBahasa(String b){
         bahasa.add(b);
-    }
-
-    void addSkill(List<String> skill) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

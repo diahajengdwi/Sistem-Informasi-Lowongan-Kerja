@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
+package Model;
 
 /**
  *
  * @author Diah Ajeng
  */
 public class Pengalaman {
+    private static int idPengalaman;
     private String job;
     private int thnMasuk;
     private int thnKeluar;
@@ -18,6 +14,7 @@ public class Pengalaman {
     private String prov;
 
     public Pengalaman(String job, int thnMasuk, int thnKeluar, String divisi, String kota, String prov) {
+        idPengalaman++;
         this.job = job;
         this.thnMasuk = thnMasuk;
         this.thnKeluar = thnKeluar;
@@ -27,6 +24,14 @@ public class Pengalaman {
     }
 
     // Setter & Getter
+
+    public int getIdPengalaman() {
+        return idPengalaman;
+    }
+
+    public void setIdPengalaman(int idPengalaman) {
+        Pengalaman.idPengalaman = idPengalaman;
+    }
     
     public String getJob() {
         return job;

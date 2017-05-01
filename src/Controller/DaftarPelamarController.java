@@ -5,7 +5,8 @@
  */
 package Controller;
 
-import Model.Model;
+import Model.Aplikasi;
+import Model.Pelamar;
 import View.DaftarPelamarpage;
 import View.Daftarpage;
 import java.awt.event.ActionEvent;
@@ -19,9 +20,9 @@ import javax.swing.JOptionPane;
  */
 public class DaftarPelamarController {
     private DaftarPelamarpage view;
-    private Model model;
+    private Aplikasi model;
     
-    public DaftarPelamarController(DaftarPelamarpage view, Model model){
+    public DaftarPelamarController(DaftarPelamarpage view, Aplikasi model){
         this.view = view;
         this.model = model;
         this.view.addListenkeluar(new ActionListener(){
@@ -47,7 +48,12 @@ public class DaftarPelamarController {
             public void actionPerformed(ActionEvent e) {
                 if(view.getPass().equals(view.getPwd())){
                     try{
-                        model.addPelamar(view.getNama(), view.getEmail(), view.getPwd());
+                        // create
+                        if(model.getDaftaPelamar()==null){
+                            model.addPelamar(new Pelamar(0,view.getNama(), view.getEmail(), view.getPwd()));
+                        }else{
+                            model.addPelamar(new Pelamar(model.getDaftaPelamar().size(),view.getNama(), view.getEmail(), view.getPwd()));
+                        }
                         JOptionPane.showMessageDialog(null, "Berhasil!");
                     }catch(Exception ex){
                         JOptionPane.showMessageDialog(null, "Terdapat kesalahan!");

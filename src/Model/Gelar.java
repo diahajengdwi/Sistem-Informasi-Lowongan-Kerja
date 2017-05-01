@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
+package Model;
 
 /**
  *
  * @author Diah Ajeng
  */
 public class Gelar {
+    private static int idGelar;
     private String namaGelar;
     private int thnMasuk;
     private int thnKeluar;
@@ -17,6 +13,7 @@ public class Gelar {
     private double ipk;
 
     public Gelar(String namaGelar, int thnMasuk, int thnKeluar, String institusi, double ipk) {
+        idGelar++;
         this.namaGelar = namaGelar;
         this.thnMasuk = thnMasuk;
         this.thnKeluar = thnKeluar;
@@ -25,6 +22,14 @@ public class Gelar {
     }
     
     // Setter & Getter
+
+    public int getIdGelar() {
+        return idGelar;
+    }
+
+    public void setIdGelar(int idGelar) {
+        Gelar.idGelar = idGelar;
+    }
     
     public String getNamaGelar() {
         return namaGelar;

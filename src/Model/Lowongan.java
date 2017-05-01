@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
+package Model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.text.ParseException;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,6 +16,13 @@ public class Lowongan{
     private List<BerkasLamaran> berkasMasuk;
     private List<BerkasLamaran> berkasDiterima;
     private Date deadline;
+
+    public Lowongan(int idLowongan, Date deadline) {
+        this.idLowongan = idLowongan;
+        this.deadline = deadline;
+        berkasMasuk = new ArrayList<BerkasLamaran>();
+        berkasDiterima = new ArrayList<BerkasLamaran>();
+    }
     
     // Getter and Setter
     public void setIdLowongan(int idLowongan) {
@@ -58,7 +61,11 @@ public class Lowongan{
     }
 
     public List<BerkasLamaran> getBerkasDiterima() {
-        return berkasDiterima;
+        if(berkasDiterima.isEmpty()){
+            return null;
+        }else{
+            return berkasDiterima;
+        }
     }
     
     public void setBerkasDiterima(List<BerkasLamaran> berkasDiterima) {

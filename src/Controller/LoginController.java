@@ -1,11 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
-import Model.Model;
+import Model.Aplikasi;
+import Model.Pelamar;
+import Model.Perusahaan;
 import View.Daftarpage;
 import View.Homepage;
 import View.Loginpage;
@@ -21,9 +18,9 @@ import javax.swing.JOptionPane;
  */
 public class LoginController {
     private Loginpage view;
-    private Model model;
+    private Aplikasi model;
     
-    public LoginController(Loginpage view, Model model){
+    public LoginController(Loginpage view, Aplikasi model){
         this.view = view;
         this.model = model;
         this.view.addListendaftar(new ActionListener(){
@@ -49,55 +46,40 @@ public class LoginController {
             public void actionPerformed(ActionEvent e) {
                 boolean find = false;
                 int i = 0;
-                
-                if(view.getEmail().isEmpty() || view.getPassword().isEmpty()){
-                    JOptionPane.showMessageDialog(null, "Field tidak boleh ada yang kosong");
-                }else if(view.getPilihan().equals("Perusahaan")){
-                    if(model.getDaftarPerusahaan().size() == 0){
-                        JOptionPane.showMessageDialog(null, "Anda belum terdaftar");
-                    }else{
-                        while(find != true){
-                            if(model.getDaftarPerusahaan().get(i).getEmail().equals(view.getEmail()) && model.getDaftarPerusahaan().get(i).getPassword().equals(view.getPassword())){
-                                find = true;
+                try{
+                   if(view.getEmail().isEmpty() || view.getPassword().isEmpty()){
+                        JOptionPane.showMessageDialog(null, "Field tidak boleh ada yang kosong");
+                    }else if(view.getPilihan().equals("Perusahaan")){
+                        if(model.getDaftarPerusahaan().size() == 0){
+                            JOptionPane.showMessageDialog(null, "Anda belum terdaftar");
+                        }else{
+                            Perusahaan perusahaan = model.LoginPerusahaan(view.getEmail(), view.getPassword());
+                            if(perusahaan !=null){
+                                JOptionPane.showMessageDialog(null, "Berhasil");
+                                view.dispose();
+                                PerusahaanController prController = new PerusahaanController(model, perusahaan);
                             }else{
-                                i++;
+                                JOptionPane.showMessageDialog(null, "Periksa kembali email dan password anda");
+                                view.reset();
                             }
                         }
-
-                        if(find == true){
-                            JOptionPane.showMessageDialog(null, "Berhasil");
-                            view.dispose();
-                            Perusahaanpage viewPerusahaan = new Perusahaanpage();
-                            PerusahaanController prController = new PerusahaanController(viewPerusahaan, model); // tambah ,i
-                            viewPerusahaan.setVisible(find);
+                    }else if(view.getPilihan().equals("Pelamar")){
+                        if(model.getDaftaPelamar().size() == 0){
+                            JOptionPane.showMessageDialog(null, "Anda belum terdaftar");
                         }else{
-                            JOptionPane.showMessageDialog(null, "Periksa kembali email dan password anda");
-                            view.reset();
-                        }
-                    }
-                }else if(view.getPilihan().equals("Pelamar")){
-                    if(model.getDaftarPelamar().size() == 0){
-                        JOptionPane.showMessageDialog(null, "Anda belum terdaftar");
-                    }else{
-                        while(find != true){
-                            if(model.getDaftarPelamar().get(i).getEmail().equals(view.getEmail()) && model.getDaftarPelamar().get(i).getPassword().equals(view.getPassword())){
-                                find = true;
+                            Pelamar pelamar = model.LoginPelamar(view.getEmail(), view.getPassword());
+                            if(pelamar !=null){
+                                JOptionPane.showMessageDialog(null, "Berhasil");
+                                view.dispose();
+                                PelamarController prController = new PelamarController(model, pelamar);
                             }else{
-                                i++;
+                                JOptionPane.showMessageDialog(null, "Periksa kembali email dan password anda");
+                                view.reset();
                             }
                         }
-
-                        if(find == true){
-                            JOptionPane.showMessageDialog(null, "Berhasil");
-                            view.dispose();
-                            Pelamarpage viewPelamar = new Pelamarpage();
-                            PelamarController pController = new PelamarController(viewPelamar, model); // tambah ,i
-                            viewPelamar.setVisible(find);
-                        }else{
-                            JOptionPane.showMessageDialog(null, "Periksa kembali email dan password anda");
-                            view.reset();
-                        }
-                    }
+                    } 
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "Terjadi Kesalahan");
                 }
             }        
         });

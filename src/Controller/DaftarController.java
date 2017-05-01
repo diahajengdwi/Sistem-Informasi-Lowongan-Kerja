@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
-import Model.Model;
+import Model.Aplikasi;
 import View.DaftarPelamarpage;
 import View.DaftarPerusahaanpage;
 import View.Daftarpage;
@@ -20,9 +15,9 @@ import javax.swing.JOptionPane;
  */
 public class DaftarController {
     private Daftarpage view;
-    private Model model;
+    private Aplikasi model;
     
-    public DaftarController(Daftarpage view, Model model){
+    public DaftarController(Daftarpage view, Aplikasi model){
         this.view = view;
         this.model = model;
         this.view.addListenkeluar(new ActionListener(){

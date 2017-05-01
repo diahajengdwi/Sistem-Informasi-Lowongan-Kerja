@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
+package Model;
 
+import View.AplikasiKonsol;
 import Controller.HomeController;
 import Model.Model;
 import View.Homepage;
@@ -28,11 +24,11 @@ public class Driver {
             }
             view.dispose();
             Homepage viewHome = new Homepage();
-            Model model = new Model();
+            Aplikasi model = new Aplikasi();
             HomeController controller = new HomeController(viewHome, model);
             viewHome.setVisible(true);
-            AplikasiKonsol aplikasi = new AplikasiKonsol();
-            aplikasi.mainMenu();
+            AplikasiKonsol aplikasi = new AplikasiKonsol(model);
+            aplikasi.MainMenu();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Terjadi kesalahan!");
         }

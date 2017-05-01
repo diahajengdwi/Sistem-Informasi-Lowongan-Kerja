@@ -1,22 +1,61 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
-import Model.Model;
+import Model.Aplikasi;
+import Model.Perusahaan;
+import View.Loginpage;
 import View.Perusahaanpage;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Diah Ajeng
  */
-public class PerusahaanController {
-    private Perusahaanpage view;
-    private Model model;
+public class PerusahaanController implements ActionListener {
     
-    public PerusahaanController(Perusahaanpage view, Model model){
-        
+    private Perusahaanpage view;
+    private Aplikasi model;
+    private Perusahaan perusahaan;
+    
+    public PerusahaanController(Aplikasi model, Perusahaan perusahaan){
+        this.model = model;
+        view = new Perusahaanpage();
+        view.setVisible(true);
+        view.setActionListener(this);
+        view.setSession("Selamar Datang "+perusahaan.getNmPerusahaan());
+        this.perusahaan = perusahaan;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object klik = e.getSource();
+        if (klik.equals(view.getbtnberkas())) {
+            view.dispose();
+            PerusahaanBerkaspageController pBController = new PerusahaanBerkaspageController(model, perusahaan);
+        } else if (klik.equals(view.getbtnclose())) {
+            int selectedOption = JOptionPane.showConfirmDialog(null,"Apakah anda yakin akan keluar?", "Informasi", JOptionPane.YES_NO_OPTION);
+            if (selectedOption == JOptionPane.YES_OPTION) {
+                view.dispose();
+                Loginpage viewLogin = new Loginpage();
+                LoginController login = new LoginController(viewLogin, model);
+                viewLogin.setVisible(true);
+            }
+        }else if (klik.equals(view.getbtndaftarP())) {
+            view.dispose();
+            PerusahaanPelamarController pPController = new PerusahaanPelamarController(model, perusahaan);
+        }else if (klik.equals(view.getbtnlowongan())) {
+            view.dispose();
+            PerusahaanLowController pLController = new PerusahaanLowController(model, perusahaan);
+        }else if (klik.equals(view.getbtnset())) {
+            view.dispose();
+            PerusahaanSetController prController = new PerusahaanSetController(model, perusahaan);
+        }else if (klik.equals(view.getprofil())) {
+            view.dispose();
+            PerusahaanProfilController profController = new PerusahaanProfilController(model, perusahaan);
+        }
     }
 }

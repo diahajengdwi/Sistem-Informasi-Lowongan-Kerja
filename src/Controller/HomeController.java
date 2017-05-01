@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Controller.CariController;
-import Model.Model;
+import Model.Aplikasi;
 import View.Caripage;
 import View.Daftarpage;
 import View.Homepage;
@@ -22,10 +17,10 @@ import javax.swing.Icon;
  * @author Diah Ajeng
  */
 public class HomeController {
-    private Model model;
+    private Aplikasi model;
     private Homepage view;
     
-    public HomeController(Homepage view, Model model){
+    public HomeController(Homepage view, Aplikasi model){
         this.view = view;
         this.model = model;
         this.view.addListencari(new ActionListener(){

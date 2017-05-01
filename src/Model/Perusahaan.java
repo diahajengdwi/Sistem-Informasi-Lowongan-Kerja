@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
+package Model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,17 +18,18 @@ public class Perusahaan extends Orang{
     private String jenis;
     private String kat;
     private int karyawan;
-    Lowongan l = new Lowongan();
 
     // Constructor
     public Perusahaan(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String password, String nmPerusahaan){
         super(id, nama, jk, tempatLahir, tglLahir, noTelp, email, password);
+        this.id = id;
         this.nmPerusahaan = nmPerusahaan;
         daftarLowongan = new ArrayList<Lowongan>() {};
     }
     
     public Perusahaan(int id, String nmPerusahaan, String noTelp, String jenis, String kat, int karyawan, String nama, String email, String password){
         super(id, nama, noTelp, email, password);
+        this.id = id;
         this.nmPerusahaan = nmPerusahaan;
         this.jenis = jenis;
         this.kat = kat;
@@ -42,15 +38,17 @@ public class Perusahaan extends Orang{
     }
     
     // Getter and Setter
-    public Lowongan getdaftarLowongan(int index){
-        return daftarLowongan.get(index);
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
-    public Lowongan getdaftarLowonganbyid(int id){
-        if(daftarLowongan.equals(id)){
-            return daftarLowongan.get(id);
-        }
-        return null;
+    public Lowongan getdaftarLowongan(int id){
+       return daftarLowongan.get(id);
     }
 
     public List<Lowongan> getDaftarLowongan() {
@@ -72,13 +70,35 @@ public class Perusahaan extends Orang{
     public void setNmPerusahaan(String nmPerusahaan) {
         this.nmPerusahaan = nmPerusahaan;
     }
+
+    public String getJenis() {
+        return jenis;
+    }
+
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
+    }
+
+    public String getKat() {
+        return kat;
+    }
+
+    public void setKat(String kat) {
+        this.kat = kat;
+    }
+
+    public int getKaryawan() {
+        return karyawan;
+    }
+
+    public void setKaryawan(int karyawan) {
+        this.karyawan = karyawan;
+    }
       
     //Method
-    public void createLowongan(Date deadline) {
+    public void createLowongan(int idlowongan, Date deadline) {
+        Lowongan l = new Lowongan(idlowongan, deadline);
         daftarLowongan.add(l);
-        int n = daftarLowongan.size()-1;
-        daftarLowongan.get(n).setIdLowongan(1);
-        daftarLowongan.get(n).setDeadline(deadline);
     }
     
     public void removeLowongan(int id){
@@ -87,7 +107,7 @@ public class Perusahaan extends Orang{
 
     @Override
     public String toString() {
-        return "Perusahaan{" + "daftarLowongan=" + daftarLowongan + ", id=" + id + ", nmPerusahaan=" + nmPerusahaan + ", jenis=" + jenis + ", kat=" + kat + ", karyawan=" + karyawan + ", l=" + l + '}';
-    }  
+        return "Perusahaan{" + "daftarLowongan=" + daftarLowongan + ", id=" + id + ", nmPerusahaan=" + nmPerusahaan + ", jenis=" + jenis + ", kat=" + kat + ", karyawan=" + karyawan + '}';
+    }   
 
 }
